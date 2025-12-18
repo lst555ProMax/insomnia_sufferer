@@ -3,6 +3,10 @@
 
 .tabsContainer {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
 }
 
 .tabList {
@@ -37,6 +41,9 @@
 }
 
 .tabContent {
-  min-height: 400px;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
 }
 
