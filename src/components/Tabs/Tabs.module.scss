@@ -1,0 +1,42 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.tabsContainer {
+  width: 100%;
+}
+
+.tabList {
+  display: flex;
+  border-bottom: 2px solid $border-color;
+  margin-bottom: $spacing-lg;
+  gap: $spacing-xs;
+}
+
+.tab {
+  padding: $spacing-md $spacing-lg;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-size: $font-size-lg;
+  font-weight: 500;
+  color: $text-color-light;
+  transition: all 0.2s ease;
+  margin-bottom: -2px;
+
+  &:hover {
+    color: $primary-color;
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+
+  &.active {
+    color: $primary-color;
+    border-bottom-color: $secondary-color;
+    font-weight: 600;
+  }
+}
+
+.tabContent {
+  min-height: 400px;
+}
+

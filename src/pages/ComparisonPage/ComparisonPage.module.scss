@@ -1,0 +1,191 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.container {
+  min-height: 100vh;
+  padding: $spacing-lg;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: $spacing-2xl;
+  padding: $spacing-xl 0;
+  border-bottom: 2px solid $border-color;
+}
+
+.title {
+  font-size: $font-size-3xl;
+  color: $primary-color;
+  font-weight: 600;
+  margin-bottom: $spacing-sm;
+}
+
+.prompt {
+  font-size: $font-size-sm;
+  color: $text-color-light;
+  font-style: italic;
+  margin: 0;
+}
+
+.main {
+  width: 100%;
+}
+
+.contentWrapper {
+  @include card;
+  padding: $spacing-xl;
+  min-height: 500px;
+  max-height: calc(100vh - 300px);
+  overflow-y: auto;
+}
+
+.markdownContent {
+  font-size: $font-size-base;
+  line-height: 1.8;
+  color: $text-color;
+  
+  // 标题样式
+  h1 {
+    font-size: $font-size-2xl;
+    font-weight: 700;
+    margin-top: $spacing-xl;
+    margin-bottom: $spacing-md;
+    color: $primary-color;
+    border-bottom: 2px solid $border-color;
+    padding-bottom: $spacing-sm;
+    
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  
+  h2 {
+    font-size: $font-size-xl;
+    font-weight: 600;
+    margin-top: $spacing-lg;
+    margin-bottom: $spacing-md;
+    color: $primary-color;
+    border-bottom: 1px solid $border-color;
+    padding-bottom: $spacing-xs;
+  }
+  
+  h3 {
+    font-size: $font-size-lg;
+    font-weight: 600;
+    margin-top: $spacing-md;
+    margin-bottom: $spacing-sm;
+    color: $primary-color;
+  }
+  
+  h4 {
+    font-size: $font-size-base;
+    font-weight: 600;
+    margin-top: $spacing-md;
+    margin-bottom: $spacing-sm;
+    color: $text-color;
+  }
+  
+  // 段落样式
+  p {
+    margin-bottom: $spacing-md;
+    text-align: justify;
+  }
+  
+  // 列表样式
+  ul, ol {
+    margin-bottom: $spacing-md;
+    padding-left: $spacing-lg;
+    
+    li {
+      margin-bottom: $spacing-xs;
+      line-height: 1.8;
+    }
+  }
+  
+  // 表格样式
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: $spacing-md 0;
+    font-size: $font-size-sm;
+    
+    th, td {
+      border: 1px solid $border-color;
+      padding: $spacing-sm;
+      text-align: left;
+    }
+    
+    th {
+      background-color: $background-color;
+      font-weight: 600;
+      color: $primary-color;
+    }
+    
+    tr:nth-child(even) {
+      background-color: rgba(0, 0, 0, 0.02);
+    }
+  }
+  
+  // 引用样式
+  blockquote {
+    border-left: 4px solid $secondary-color;
+    padding-left: $spacing-md;
+    margin: $spacing-md 0;
+    color: $text-color-light;
+    font-style: italic;
+  }
+  
+  // 代码样式
+  code {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 2px 6px;
+    border-radius: $border-radius-sm;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+  }
+  
+  pre {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: $spacing-md;
+    border-radius: $border-radius-md;
+    overflow-x: auto;
+    margin: $spacing-md 0;
+    
+    code {
+      background: none;
+      padding: 0;
+    }
+  }
+  
+  // 链接样式
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  // 强调样式
+  strong {
+    font-weight: 600;
+    color: $primary-color;
+  }
+  
+  em {
+    font-style: italic;
+  }
+  
+  // 水平分割线
+  hr {
+    border: none;
+    border-top: 1px solid $border-color;
+    margin: $spacing-lg 0;
+  }
+}
+
+
+
