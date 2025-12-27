@@ -6,12 +6,14 @@ import Tabs from '../../components/Tabs'
 import originalMarkdown from '../../data/original.md?raw'
 import qianwenMarkdown from '../../data/qianwen.md?raw'
 import geminiMarkdown from '../../data/gemini.md?raw'
+import kimiMarkdown from '../../data/kimi.md?raw'
 
 const ComparisonPage: React.FC = () => {
   const tabs = [
     { id: 'original', label: '原始文章' },
     { id: 'qianwen', label: '千问 Deep Research' },
     { id: 'gemini', label: 'Gemini Deep Research' },
+    { id: 'kimi', label: 'Kimi 文学性评价' },
   ]
 
   return (
@@ -45,6 +47,14 @@ const ComparisonPage: React.FC = () => {
               remarkPlugins={[remarkGfm]}
             >
               {geminiMarkdown}
+            </ReactMarkdown>
+          </div>
+          <div className={styles.contentWrapper}>
+            <ReactMarkdown 
+              className={styles.markdownContent}
+              remarkPlugins={[remarkGfm]}
+            >
+              {kimiMarkdown}
             </ReactMarkdown>
           </div>
         </Tabs>
